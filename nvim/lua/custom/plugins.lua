@@ -3,13 +3,13 @@ local plugin = {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
-    opts = function()
-      return require "custom.configs.null-ls"
-    end,
-  },
+  --{
+  --  "jose-elias-alvarez/null-ls.nvim",
+  --  ft = {"python"},
+  --  opts = function()
+  --    return require "custom.configs.null-ls"
+  --  end,
+  --},
   {
     "williamboman/mason.nvim",
     opts = {
@@ -17,7 +17,27 @@ local plugin = {
         "black",
         "mypy",
         "ruff",
+        --"lua-language-server",
+      }
+    }
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {
         "pyright",
+        "lua_ls",
+      }
+    }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "python",
+        "json",
       }
     }
   },
@@ -27,6 +47,6 @@ local plugin = {
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
-  }
+  },
 }
 return plugin
