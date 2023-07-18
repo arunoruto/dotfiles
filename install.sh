@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# setup git config
+ln -s $PWD/.gitconfig $HOME/.gitconfig
+
 # Install tpm for tmux
 mkdir -p $HOME/.config/tmux/plugins
 git clone https://github.com/tmux-plugins/tpm $HOME/.config/ tmux/plugins/tpm
