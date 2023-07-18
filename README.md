@@ -7,6 +7,10 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
+## Fonts
+`nvim` and `tmux` require a patched [nerd font](https://www.nerdfonts.com/). Since FiraCode enables ligatures, I opt for [FiraCode Nerd Font](https://www.programmingfonts.org/#firacode) for a cohesive look.
+After downloading your font, move the font fodler into `~/.local/share/fonts/`. Run `fc-cache -fv` to make the font available. To check if it was successful, use `fc-list | grep -i firacode`. If you have FiraCode Nerd Font inside of your `.local` folder, you are good to go!
+
 # Inspirations
 Some videos and articles from where the configs are based on.
 
