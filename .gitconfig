@@ -1,0 +1,10 @@
+[core]
+	editor = vim
+[user]
+	name = Mirza
+	email = 21687187+arunoruto@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
