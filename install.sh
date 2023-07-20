@@ -3,6 +3,11 @@
 # setup git config
 ln -s $PWD/.gitconfig $HOME/.gitconfig
 
+# Configure alacritty and the catppuccin theme
+mkdir -p $HOME/.config/alacritty
+git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
+ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # Install tpm for tmux
 mkdir -p $HOME/.config/tmux/plugins
 git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm

@@ -38,6 +38,7 @@ local plugin = {
         "lua",
         "python",
         "json",
+        "yaml",
       }
     }
   },
