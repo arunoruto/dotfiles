@@ -21,10 +21,10 @@ ln -s $PWD/nvim/lua/custom $HOME/.config/nvim/lua/custom
 # Install oh-my-zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.config/zsh
 mv ~/.zshrc ~/.zshrc.bak
-ln -s $PWD/.zshrc $HOME/.zshrc
+ln -s $PWD/home/.zshrc $HOME/.zshrc
 
 # Link starship config gile
-ln -s $PWD/starship.toml $HOME/.config/starship.toml
+ln -s $PWD/config/starship.toml $HOME/.config/starship.toml
 
 ## Install zsh plugins
 ZSH_CUSTOM=$HOME/.config/zsh/custom
