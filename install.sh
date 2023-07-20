@@ -18,6 +18,9 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.config/zsh
 mv ~/.zshrc ~/.zshrc.bak
 ln -s $PWD/.zshrc $HOME/.zshrc
 
+# Link starship config gile
+ln -s $PWD/starship.toml $HOME/.config/starship.toml
+
 ## Install zsh plugins
 ZSH_CUSTOM=$HOME/.config/zsh/custom
 mkdir -p $ZSH_CUSTOM
