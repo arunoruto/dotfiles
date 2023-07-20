@@ -1,9 +1,10 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 # setup git config
 ln -s $PWD/.gitconfig $HOME/.gitconfig
 
 # Configure alacritty and the catppuccin theme
+# Launch in wayland using `env WINIT_UNIX_BACKEND=x11 alacritty`
 mkdir -p $HOME/.config/alacritty
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
 ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
