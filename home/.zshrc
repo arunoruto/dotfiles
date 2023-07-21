@@ -116,15 +116,15 @@ source $ZSH/oh-my-zsh.sh
 #[[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
 #[[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
 
-# Finally, make sure the terminal is in application mode, when zle is
-# active. Only then are the values from $terminfo valid.
-if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
-	autoload -Uz add-zle-hook-widget
-	function zle_application_mode_start { echoti smkx }
-	function zle_application_mode_stop { echoti rmkx }
-	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
-	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
-fi
+# # Finally, make sure the terminal is in application mode, when zle is
+# # active. Only then are the values from $terminfo valid.
+# if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
+# 	autoload -Uz add-zle-hook-widget
+# 	function zle_application_mode_start { echoti smkx }
+# 	function zle_application_mode_stop { echoti rmkx }
+# 	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+# 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+# fi
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -133,11 +133,11 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
